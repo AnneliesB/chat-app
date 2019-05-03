@@ -1,4 +1,112 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .userForm__field__icon {
   width: 32px;
+}
+
+.container {
+  background-color: #F2F4F8;
+  padding: 2em 4em;
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
+}
+
+.userForm__field label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.userForm__field__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: calc(-32px - 1em);
+}
+
+.container input[type=text] {
+  border: none;
+  margin-left: 1em;
+  background-color: #EAECF1;
+  width: 60%;
+  height: 32px;
+  border-radius: 3em;
+}
+
+.btn {
+  margin-top: 1.5em;
+  border-radius: 3em;
+  width: 68%;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 100;
+  padding: 0.5em 0em;
+  text-align: center;
+  margin-left: -0.25em;
+}
+
+.btn--primary {
+  background-color: #45A4F8;
+  color: #EAECF0;
+}
+
+.btn--default {
+  border: 1px solid #303944;
+  color: #303944;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 950px) {
+  .container {
+    width: 60%;
+    margin: 6em auto 0em auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  h2 {
+    margin-left: -2em;
+    margin-bottom: 1.5em;
+  }
+  .register,
+  .login {
+    width: 50%;
+    margin-left: 6em;
+  }
+  .userForm__field {
+    margin-bottom: 2em;
+  }
+  .userForm__field label {
+    margin-left: 1em;
+  }
+  .register::after {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 340px;
+    display: block;
+    background-color: #EAECF1;
+    top: 22%;
+    left: 50%;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #EAECF1;
+}
+
+h2 {
+  font-weight: 400;
 }
 /*# sourceMappingURL=app.css.map */

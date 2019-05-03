@@ -1,4 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
 @import 'variables';
 @import 'components/btn';
 @import 'components/alert';
 @import 'components/icon';
+@import 'components/forms';
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $solitudeLight;
+}
+
+h2{
+    font-weight: 400;
+}
