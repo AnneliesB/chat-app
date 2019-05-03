@@ -3,34 +3,34 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  link(rel='stylesheet' href='../public/stylesheets/style.css')
+  link(rel='stylesheet' href='stylesheets/dist/css/app.css')
   title Login/register
 .container
   .register
     form.userForm(action='POST')
       .userForm__field
         label(for='email') e-mail
-        img(src='' alt='Email icon')
+        img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
         input(type='text' name='email')
       .userForm__field
         label(for='username') username
-        img(src='' alt='Username icon')
+        img(src='images/user.svg' alt='Username icon' class='userForm__field__icon')
         input(type='text' name='username')
       .userForm__field
         label(for='password') password
-        img(src='' alt='Password icon')
+        img(src='images/padlock.svg' alt='Password icon' class='userForm__field__icon')
         input(type='text' name='password')
       .userForm__field
-        input(type='submit' value='Create my account')
+        input(type='submit' value='Create my account' class='userForm__field__icon')
   .login
     form.userForm(action='POST')
       .userForm__field
         label(for='email') e-mail
-        img(src='' alt='Email icon')
+        img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
         input(type='text' name='email')
       .userForm__field
         label(for='password') password
-        img(src='' alt='Password icon')
+        img(src='images/padlock.svg' alt='Password icon' class="userForm__field__icon")
         input(type='text' name='password')
       .userForm__field
         input(type='submit' value='Login')
