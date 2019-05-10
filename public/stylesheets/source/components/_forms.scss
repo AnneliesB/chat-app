@@ -124,6 +124,7 @@
 @media(min-width: 950px) {
     .container {
         width: 60%;
+        min-width: 880px;
         margin: 6em auto 0em auto;
         display: flex;
         justify-content: space-evenly;
@@ -133,15 +134,22 @@
         box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
     }
 
-    h2{
+    .container h2{
+        display: block;
         margin-left: -2em;
         margin-bottom: 1.5em;
     }
 
+    .buttons--mobile{
+        display: none;
+    }
+
     .register,
     .login {
+        display: block;
         width: 50%;
         margin-left: 6em;
+        height: auto;
     }
 
     .userForm__field {
@@ -158,17 +166,31 @@
     margin-left: calc(-32px - 1em);
 }
 
-.btn {
-    margin-top: 1.5em;
-    border-radius: $notEdgy;
+.userForm__field--submit{
+    margin-left: auto;
     width: 68%;
-    border: none;
-    font-size: 1.2em;
-    font-weight: 100;
-    padding: 0.5em 0em;
-    text-align: center;
-    margin-left: -0.25em;
+    margin-right: auto;
 }
+
+    .btn {
+        margin-top: 1.5em;
+        border-radius: $notEdgy;
+        width: 100%;
+        border: none;
+        font-size: 1.2em;
+        font-weight: 100;
+        padding: 0.5em 0em;
+        text-align: center;
+        margin-left: -0.25em;
+    }
+
+
+    .btn--default {
+        margin-top: 3em;
+        border: 1px solid $tuna;
+        color: $tuna;
+        background-color: rgba(256, 256, 256, 0);
+    }
 
     .register::after {
         position: absolute;

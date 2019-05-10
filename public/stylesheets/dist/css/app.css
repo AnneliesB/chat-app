@@ -149,6 +149,7 @@
 @media (min-width: 950px) {
   .container {
     width: 60%;
+    min-width: 880px;
     margin: 6em auto 0em auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -160,14 +161,20 @@
     -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
   }
-  h2 {
+  .container h2 {
+    display: block;
     margin-left: -2em;
     margin-bottom: 1.5em;
   }
+  .buttons--mobile {
+    display: none;
+  }
   .register,
   .login {
+    display: block;
     width: 50%;
     margin-left: 6em;
+    height: auto;
   }
   .userForm__field {
     margin-bottom: 2em;
@@ -184,16 +191,27 @@
             align-items: center;
     margin-left: calc(-32px - 1em);
   }
+  .userForm__field--submit {
+    margin-left: auto;
+    width: 68%;
+    margin-right: auto;
+  }
   .btn {
     margin-top: 1.5em;
     border-radius: 3em;
-    width: 68%;
+    width: 100%;
     border: none;
     font-size: 1.2em;
     font-weight: 100;
     padding: 0.5em 0em;
     text-align: center;
     margin-left: -0.25em;
+  }
+  .btn--default {
+    margin-top: 3em;
+    border: 1px solid #303944;
+    color: #303944;
+    background-color: rgba(255, 255, 255, 0);
   }
   .register::after {
     position: absolute;
