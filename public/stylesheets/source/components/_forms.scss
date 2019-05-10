@@ -1,0 +1,206 @@
+.buttons--mobile{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.button--mobile{
+    width: 50%;
+    
+}
+
+.button--mobile--register{
+    background-color: $solitudeLight;
+}
+
+.button--mobile--login{
+    background-color: $catskillWhite;
+}
+
+.container {
+    background-color: $catskillWhite;
+    padding: 2em 0.5em;
+
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.register{
+    display: none;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.login h2, .register h2{
+    display: none;
+}
+
+.userForm{
+    width: 100%;
+    
+}
+
+.userForm__field{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userForm__field label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-style: italic;
+    font-weight: 100;
+    margin-left: 4em;
+    margin-top: 1.9em;
+}
+
+.userForm__field__input {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+
+.container input[type=text] {
+    border: none;
+    margin-left: 1em;
+    background-color: $solitudeLight;
+    width: 100%;
+    height: 32px;
+    border-radius: $notEdgy;
+}
+
+.btn {
+    margin-top: 1.5em;
+    border-radius: $notEdgy;
+    width: 100%;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 0.5em 0em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.btn--primary {
+    margin-top: 3em;
+    background-color: $pictonBlue;
+    color: $solitude;
+}
+
+.userForm__field--submit{
+    margin-left: auto;
+    width: 68%;
+    margin-right: auto;
+}
+
+.btn--default {
+    margin-top: 3em;
+    border: 1px solid $tuna;
+    color: $tuna;
+    background-color: rgba(256, 256, 256, 0);
+}
+
+
+
+
+@media(min-width: 950px) {
+    .container {
+        width: 60%;
+        min-width: 880px;
+        margin: 6em auto 0em auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2em 4em;
+        -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .container h2{
+        display: block;
+        margin-left: -2em;
+        margin-bottom: 1.5em;
+    }
+
+    .buttons--mobile{
+        display: none;
+    }
+
+    .register,
+    .login {
+        display: block;
+        width: 50%;
+        margin-left: 6em;
+        height: auto;
+    }
+
+    .userForm__field {
+        margin-bottom: 2em;
+    }
+
+    .userForm__field label {
+        margin-left: 1em;
+    }
+
+    .userForm__field__input {
+    display: flex;
+    align-items: center;
+    margin-left: calc(-32px - 1em);
+}
+
+.userForm__field--submit{
+    margin-left: auto;
+    width: 68%;
+    margin-right: auto;
+}
+
+    .btn {
+        margin-top: 1.5em;
+        border-radius: $notEdgy;
+        width: 100%;
+        border: none;
+        font-size: 1.2em;
+        font-weight: 100;
+        padding: 0.5em 0em;
+        text-align: center;
+        margin-left: -0.25em;
+    }
+
+
+    .btn--default {
+        margin-top: 3em;
+        border: 1px solid $tuna;
+        color: $tuna;
+        background-color: rgba(256, 256, 256, 0);
+    }
+
+    .register::after {
+        position: absolute;
+        content: " ";
+        width: 2px;
+        height: 340px;
+        display: block;
+        background-color: $solitudeLight;
+        top: 22%;
+        left: 50%;
+    }
+
+}

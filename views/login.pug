@@ -3,34 +3,51 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet' href='stylesheets/dist/css/normalize.css')
   link(rel='stylesheet' href='stylesheets/dist/css/app.css')
+  link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700' rel='stylesheet')
   title Login/register
+.buttons--mobile
+  .button--mobile.button--mobile--register.inactive
+    h2 Register
+  .button--mobile.button--mobile--login.active
+    h2 Login
 .container
   .register
+    h2 Register
     form.userForm(action='POST')
       .userForm__field
         label(for='email') e-mail
-        img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
-        input(type='text' name='email')
+        .userForm__field__input
+            img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
+            input(type='text' name='email')
       .userForm__field
         label(for='username') username
-        img(src='images/user.svg' alt='Username icon' class='userForm__field__icon')
-        input(type='text' name='username')
+        .userForm__field__input
+            img(src='images/user.svg' alt='Username icon' class='userForm__field__icon')
+            input(type='text' name='username')
       .userForm__field
         label(for='password') password
-        img(src='images/padlock.svg' alt='Password icon' class='userForm__field__icon')
-        input(type='text' name='password')
+        .userForm__field__input
+            img(src='images/padlock.svg' alt='Password icon' class='userForm__field__icon')
+            input(type='text' name='password')
       .userForm__field
-        input(type='submit' value='Create my account' class='userForm__field__icon')
+        .userForm__field--submit
+          input(type='submit' value='Create my account' class='userForm__field__icon btn btn--primary')
   .login
+    h2 Login
     form.userForm(action='POST')
       .userForm__field
         label(for='email') e-mail
-        img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
-        input(type='text' name='email')
+        .userForm__field__input
+            img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
+            input(type='text' name='email')
       .userForm__field
         label(for='password') password
-        img(src='images/padlock.svg' alt='Password icon' class="userForm__field__icon")
-        input(type='text' name='password')
+        .userForm__field__input
+            img(src='images/padlock.svg' alt='Password icon' class="userForm__field__icon")
+            input(type='text' name='password')
       .userForm__field
-        input(type='submit' value='Login')
+        .userForm__field--submit
+          input(type='submit' value='Login' class="btn btn--default")
+  script(src='/javascripts/navigation.js')
