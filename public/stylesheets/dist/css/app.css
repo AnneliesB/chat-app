@@ -149,7 +149,7 @@
 @media (min-width: 950px) {
   .container {
     width: 60%;
-    min-width: 880px;
+    min-width: 900px;
     margin: 6em auto 0em auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -171,7 +171,7 @@
   }
   .register,
   .login {
-    display: block;
+    display: block !important;
     width: 50%;
     margin-left: 6em;
     height: auto;
