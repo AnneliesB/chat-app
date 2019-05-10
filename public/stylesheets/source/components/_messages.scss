@@ -64,6 +64,7 @@ main.messages{
     height: 0;
     width: 0;
     background: tomato;
+    background-size: cover !important;
     border-radius: 100%;
     grid-row-start: span 100;
 }

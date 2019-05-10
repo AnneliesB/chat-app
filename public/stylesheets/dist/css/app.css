@@ -493,6 +493,7 @@ form.search input::placeholder {
   height: 0;
   width: 0;
   background: tomato;
+  background-size: cover !important;
   border-radius: 100%;
   -ms-grid-row: span 100;
       grid-row-start: span 100;
@@ -506,6 +507,11 @@ form.search input::placeholder {
   background: none;
   color: #666666;
   padding: 0;
+}
+
+.profile__container {
+  height: 100vh;
+  background-color: #F2F4F8;
 }
 
 body {
