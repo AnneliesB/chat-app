@@ -111,12 +111,12 @@
   background-color: #EAECF1;
   width: 100%;
   height: 32px;
-  border-radius: 3em;
+  border-radius: 1.3em;
 }
 
 .btn {
   margin-top: 1.5em;
-  border-radius: 3em;
+  border-radius: 1.3em;
   width: 100%;
   border: none;
   font-size: 1.2em;
@@ -161,8 +161,8 @@ form.messages__form input[type=text] {
   -webkit-box-flex: 5;
       -ms-flex-positive: 5;
           flex-grow: 5;
-  border-radius: 3em;
-  padding: 0;
+  border-radius: 1.3em;
+  padding: 0 20px;
   max-height: 40px;
   margin: 0;
 }
@@ -234,7 +234,7 @@ form.messages__form .btn--send {
   }
   .btn {
     margin-top: 1.5em;
-    border-radius: 3em;
+    border-radius: 1.3em;
     width: 100%;
     border: none;
     font-size: 1.2em;
@@ -295,7 +295,7 @@ form.search {
 }
 
 form.search input {
-  border-radius: 3em;
+  border-radius: 1.3em;
   background-color: #303944;
   border: 0;
   width: 200px;
@@ -338,7 +338,7 @@ form.search input::placeholder {
 
 .users::-webkit-scrollbar-thumb {
   background-color: #303944;
-  border-radius: 3em;
+  border-radius: 1.3em;
 }
 
 .user {
@@ -432,7 +432,7 @@ form.search input::placeholder {
 
 .messages__flex::-webkit-scrollbar-thumb {
   background-color: #D6DAE2;
-  border-radius: 3em;
+  border-radius: 1.3em;
 }
 
 .messages__form {
@@ -448,8 +448,8 @@ form.search input::placeholder {
 }
 
 .message--received {
-  -ms-grid-columns: 50px 400px;
-      grid-template-columns: 50px 400px;
+  -ms-grid-columns: 60px 400px;
+      grid-template-columns: 60px 400px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -473,7 +473,7 @@ form.search input::placeholder {
 
 .message__container li p {
   display: inline-block;
-  border-radius: 3em;
+  border-radius: 1.3em;
   color: #444;
   padding: 7px 10px;
   margin: 0;
