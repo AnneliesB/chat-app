@@ -1,3 +1,4 @@
+//Anne-Lies
 .buttons--mobile{
     display: flex;
     flex-direction: row;
@@ -118,9 +119,37 @@
     background-color: rgba(256, 256, 256, 0);
 }
 
+// Mauro
+form.messages__form{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+form.messages__form input[type=text]{
+    background-color: $anneliesGray;
+    border: none;
+    width: auto;
+    flex-grow: 5;
+    border-radius: $notEdgy;
+    padding: 0;
+    max-height: 40px;
+    margin: 0;
+}
+form.messages__form .btn--send{
+    background-color: $tuna;
+    width: auto;
+    flex-grow: 1;
+    color: $catskillWhite;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0;
+    max-height: 40px;
+    margin: 0;
+    margin-left: -50px;
 
+}
 
-
+//Anne-Lies
 @media(min-width: 950px) {
     .container {
         width: 60%;

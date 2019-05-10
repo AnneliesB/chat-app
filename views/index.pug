@@ -9,28 +9,95 @@ head
   title VetteChatApp
 .layout__container
   nav
+    a @
   .nav__secondary
-    .seach
+    form.search
       input(type='search' placeholder='Zoek iemand')
-    ul
+    ul.users
       li.user.user--online
         .user__avatar
         h3.user__name Poes
         h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
   main.messages
-    ul.message__container.message--received
-      li.message__avatar
-      li.message_user Beatrice
-      li Ik ben echt koekesaai eigenlijk
-      li haha
-    ul.message__container.message--sent
-      li.message__avatar
-      li.message_user You
-      li Ja swaar
-      li ge weet het dan toch
-      li hihi
-    input#message(type='text')
-    input(type='submit')
+    .messages__flex
+      ul.message__container.message--received
+        li.message__avatar
+        li.message__user Beatrice
+        li 
+          p Ik ben echt koekesaai eigenlijk
+        li 
+          p haha
+      ul.message__container.message--sent
+        li.message__avatar
+        li.message__user You
+        li 
+          p Ja swaar
+        li 
+          p ge weet het dan toch
+        li 
+          p hihi
+      ul.message__container.message--received
+        li.message__avatar
+        li.message__user Beatrice
+        li 
+          p Ik ben echt koekesaai eigenlijk
+        li 
+          p haha
+      ul.message__container.message--received
+        li.message__avatar
+        li.message__user Poes
+        li 
+          p Kunnen  jullie stoppen met al jullie gezever en mij eindelijk vis geven? Jullie mening kan oprecht niemand schelen!!! GEEF VIS!
+        li 
+          p haha
+      ul.message__container.message--sent
+        li.message__avatar
+        li.message__user You
+        li 
+          p Oké sorry
+        li 
+          p *geeft vis*
+        li 
+          p hihi
+    form.messages__form
+      input#message(type='text')
+      input.btn.btn--send(type='submit' value='Verstuur')
   .profile__container
     .profile__avatar
     .profile__name Annepries &#x1F171;
