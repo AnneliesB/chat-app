@@ -225,6 +225,13 @@
   }
 }
 
+.layout__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 12fr 4fr;
+      grid-template-columns: 1fr 4fr 12fr 4fr;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #EAECF1;
