@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/dist/css/normalize.css">
+    <link rel="stylesheet" href="stylesheets/dist/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
+    <title>VetteChatApp</title>
+</head>
+<div class="layout__container">
+    <nav></nav>
+    <div class="nav__secondary">
+        <div class="seach"><input type="search" placeholder="Zoek iemand"></div>
+        <ul>
+            <li class="user user--online">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+        </ul>
+    </div>
+    <main class="messages">
+        <ul class="message__container message--received">
+            <li class="message__avatar"></li>
+            <li class="message_user">Beatrice</li>
+            <li>Ik ben echt koekesaai eigenlijk</li>
+            <li>haha</li>
+        </ul>
+        <ul class="message__container message--sent">
+            <li class="message__avatar"></li>
+            <li class="message_user">You</li>
+            <li>Ja swaar</li>
+            <li>ge weet het dan toch</li>
+            <li>hihi</li>
+        </ul><input id="message" type="text"><input type="submit"></main>
+    <div class="profile__container">
+        <div class="profile__avatar"></div>
+        <div class="profile__name">Annepries 🅱️</div>
+        <div class="profile__motto">I've got the power</div>
+    </div>
+</div>
