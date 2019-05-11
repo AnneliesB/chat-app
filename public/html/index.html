@@ -10,11 +10,56 @@
     <title>VetteChatApp</title>
 </head>
 <div class="layout__container">
-    <nav></nav>
+    <nav><a class="selected" href="#" id="users"> <img src="images/multiple-users-silhouette.svg" alt="users" height="30px" width="30px"></a><a href="#">@</a><a href="#"> <img src="images/logout.svg" alt="logout" height="30px" width="30px"></a></nav>
     <div class="nav__secondary">
-        <div class="seach"><input type="search" placeholder="Zoek iemand"></div>
-        <ul>
+        <form class="search"><input type="search" placeholder="Zoek iemand"></form>
+        <ul class="users">
             <li class="user user--online">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--online">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--online">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--online">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
+                <div class="user__avatar"></div>
+                <h3 class="user__name">Poes</h3>
+                <h5 class="user__motto">Geef vis</h5>
+            </li>
+            <li class="user user--offline">
                 <div class="user__avatar"></div>
                 <h3 class="user__name">Poes</h3>
                 <h5 class="user__motto">Geef vis</h5>
@@ -22,22 +67,70 @@
         </ul>
     </div>
     <main class="messages">
-        <ul class="message__container message--received">
-            <li class="message__avatar"></li>
-            <li class="message_user">Beatrice</li>
-            <li>Ik ben echt koekesaai eigenlijk</li>
-            <li>haha</li>
-        </ul>
-        <ul class="message__container message--sent">
-            <li class="message__avatar"></li>
-            <li class="message_user">You</li>
-            <li>Ja swaar</li>
-            <li>ge weet het dan toch</li>
-            <li>hihi</li>
-        </ul><input id="message" type="text"><input type="submit"></main>
+        <div class="messages__flex">
+            <ul class="message__container message--received">
+                <li class="message__avatar"></li>
+                <li class="message__user">Beatrice</li>
+                <li>
+                    <p>Ik ben echt koekesaai eigenlijk</p>
+                </li>
+                <li>
+                    <p>haha</p>
+                </li>
+            </ul>
+            <ul class="message__container message--sent">
+                <li class="message__avatar"></li>
+                <li class="message__user">You</li>
+                <li>
+                    <p>Ja swaar</p>
+                </li>
+                <li>
+                    <p>ge weet het dan toch</p>
+                </li>
+                <li>
+                    <p>hihi</p>
+                </li>
+            </ul>
+            <ul class="message__container message--received">
+                <li class="message__avatar"></li>
+                <li class="message__user">Beatrice</li>
+                <li>
+                    <p>Ik ben echt koekesaai eigenlijk</p>
+                </li>
+                <li>
+                    <p>haha</p>
+                </li>
+            </ul>
+            <ul class="message__container message--received">
+                <li class="message__avatar" style="background: url(images/spongebob.jpg);"></li>
+                <li class="message__user">Poes</li>
+                <li>
+                    <p>Kunnen jullie stoppen met al jullie gezever en mij eindelijk vis geven? Jullie mening kan oprecht niemand schelen!!! GEEF VIS!</p>
+                </li>
+                <li>
+                    <p>haha</p>
+                </li>
+            </ul>
+            <ul class="message__container message--sent">
+                <li class="message__avatar"></li>
+                <li class="message__user">You</li>
+                <li>
+                    <p>Oké sorry</p>
+                </li>
+                <li>
+                    <p>*geeft vis*</p>
+                </li>
+                <li>
+                    <p>hihi</p>
+                </li>
+            </ul>
+        </div>
+        <form class="messages__form"><input id="message" type="text"><input class="btn btn--send" type="submit" value="Verstuur"></form>
+    </main>
     <div class="profile__container">
         <div class="profile__avatar"></div>
-        <div class="profile__name">Annepries 🅱️</div>
-        <div class="profile__motto">I've got the power</div>
+        <p class="profile__name">Annepries &#x1F171;</p>
+        <p class="profile__motto">I&apos;ve got the power</p>
     </div>
+    <script src="/javascripts/nav.js"></script>
 </div>
