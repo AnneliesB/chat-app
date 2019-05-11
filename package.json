@@ -15,5 +15,9 @@
     "nodemon": "^1.19.0",
     "pug": "2.0.0-beta11",
     "sass": "^1.19.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-html2pug": "^1.2.1"
   }
 }
