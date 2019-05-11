@@ -272,7 +272,24 @@ nav {
   background-color: #1D232A;
   height: 100vh;
   grid-column: auto;
-  color: tomato;
+}
+
+nav a {
+  display: block;
+  color: #EAECF1;
+  padding: 10px 10px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1.6em;
+  text-decoration: none;
+}
+
+nav a:first-child {
+  margin-top: 10vh;
+}
+
+nav a.selected {
+  background-color: #282F37;
 }
 
 .nav__secondary {

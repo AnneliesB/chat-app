@@ -2,9 +2,22 @@ nav{
     background-color: $blackPearl;
     height: 100vh;
     grid-column: auto;
-    color: tomato;
 }
-
+nav a{
+    display: block;
+    color: $solitudeLight;
+    padding: 10px 10px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1.6em;
+    text-decoration: none;
+}
+nav a:first-child{
+    margin-top: 10vh;
+}
+nav a.selected{
+    background-color: $secondaryNav;
+}
 .nav__secondary{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.32+0,0+100 */
     background: -moz-linear-gradient(45deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0) 100%), $secondaryNav; /* FF3.6-15 */

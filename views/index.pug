@@ -9,7 +9,11 @@ head
   title VetteChatApp
 .layout__container
   nav
-    a @
+    a(href="#" class="selected") 
+      img(src="images/multiple-users-silhouette.svg" alt="users" height="30px" width="30px")
+    a(href="#") @
+    a(href="#") 
+      img(src="images/logout.svg" alt="logout" height="30px" width="30px")
   .nav__secondary
     form.search
       input(type='search' placeholder='Zoek iemand')
