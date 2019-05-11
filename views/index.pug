@@ -9,7 +9,7 @@ head
   title VetteChatApp
 .layout__container
   nav
-    a(href="#" class="selected") 
+    a(href="#" class="selected" id="users") 
       img(src="images/multiple-users-silhouette.svg" alt="users" height="30px" width="30px")
     a(href="#") @
     a(href="#") 
@@ -104,5 +104,6 @@ head
       input.btn.btn--send(type='submit' value='Verstuur')
   .profile__container
     .profile__avatar
-    .profile__name Annepries &#x1F171;
-    .profile__motto I&apos;ve got the power
+    p.profile__name Annepries &#x1F171;
+    p.profile__motto I&apos;ve got the power
+  script(src='/javascripts/nav.js')

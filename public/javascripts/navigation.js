@@ -20,3 +20,5 @@ registerBtn.addEventListener('click', function (e) {
     loginBtn.style.backgroundColor = '#EAECF1';
     registerBtn.style.backgroundColor = '#F2F4F8';
 });
+
+

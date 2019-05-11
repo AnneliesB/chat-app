@@ -1,4 +1,44 @@
 .profile__container{
     height: 100vh;
     background-color: $catskillWhite;
+    padding: 10px;
+}
+.profile__avatar{
+    border-radius: 100%;
+    padding: 60px;
+    height: 0;
+    width: 0;
+    background-color: tomato;
+    margin: auto;
+}
+.profile__container p{
+    color: $tuna;
+    padding: 0;
+    margin: 10px 5px;
+}
+.profile__container p.profile__name{
+    font-size: 1.5em;
+}
+@media only screen and (max-width: 900px){
+    .profile__container{
+        height: 10vh;
+        min-height: 80px;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .profile__avatar{
+        padding: 30px;
+        grid-row: 1 / -1;
+    }
+    .profile__container p{
+        margin: 0 10px;
+    }
+}
+@media only screen and (min-width: 900px){
+    .profile__container{
+        display: block !important;
+    }
 }
