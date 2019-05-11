@@ -8,6 +8,12 @@
 @import 'components/icon';
 @import 'components/forms';
 @import 'components/layout';
+@import 'components/nav';
+@import 'components/messages';
+@import 'components/profile';
+
+
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: $solitudeLight;

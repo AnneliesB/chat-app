@@ -1,0 +1,98 @@
+.messages__flex{
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow-y: scroll;
+    scrollbar-color: $anneliesGray transparent;
+}
+.messages__flex::-webkit-scrollbar{
+    background-color: transparent;
+}
+.messages__flex::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.messages__flex::-webkit-scrollbar-thumb{
+    background-color: $anneliesGray;
+    border-radius: $notEdgy;
+}
+
+.messages__form{
+    height: 10vh;
+}
+.message__container{
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+}
+.message--received{
+    grid-template-columns: 60px 400px;
+    justify-content: flex-start;
+    width: 100%;
+}
+.message--sent{
+    grid-template-columns: 400px;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: flex-start;
+    text-align: right;
+}
+.message__container li{
+    margin: 2px 10px;
+}
+.message__container li p{
+    display: inline-block;
+    border-radius: $notEdgy;
+    color: $deepGray;
+    padding: 7px 10px;
+    margin: 0;
+}
+.message--received li p{
+    background-color: $catskillWhite;
+}
+.message--sent li p{
+    background-color: $pictonBlue;
+    color: $catskillWhite;
+}
+.message__container li.message__avatar{
+    padding: 25px;
+    height: 0;
+    width: 0;
+    background: tomato;
+    background-size: cover !important;
+    border-radius: 100%;
+    grid-row-start: span 100;
+}
+.message--sent li.message__avatar{
+    display: none;
+}
+.message__container li.message__user{
+    background: none;
+    color: $steel;
+    padding: 0;
+}
+@media only screen and (max-width: 900px){
+    .nav__secondary{
+        display: none;
+    }
+    .messages__flex{
+        height: calc(90vh - 80px);
+    }
+    .message--received{
+        grid-template-columns: 60px 1fr;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .message--sent{
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: 0;
+        justify-content: flex-start;
+        text-align: right;
+    }
+}
+@media only screen and (min-width: 900px){
+    main.messages{
+        display: block !important;
+    }
+}
