@@ -10,13 +10,16 @@ document.querySelector("#signup").addEventListener("click", (e) => {
         },
         body: JSON.stringify({
             "username": username,
-            "password": password
+            "password": password,
+            "email": email
         })
-    }).then( response =>{
+    }).then( response => {
         return response.json();
     }).then(json => {
-        if(json.status === "success"){
-            alert("success");
+        if(json.status === "succes"){
+            let token = json.data.token;
+            localStorage.setItem("token", token);
+            window.location.href = "/app";
         }
     });
 });
