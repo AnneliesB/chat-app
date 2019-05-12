@@ -76,7 +76,7 @@
  
 }
 
-.container input[type=text] {
+.container input[type=text], .container input[type=password] {
     border: none;
     margin-left: 1em;
     background-color: $solitudeLight;

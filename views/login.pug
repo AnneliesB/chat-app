@@ -15,28 +15,28 @@ head
 .container
   .register
     h2 Register
-    form.userForm(action='POST')
+    div.userForm
       .userForm__field
         label(for='email') e-mail
         .userForm__field__input
             img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
-            input(type='text' name='email')
+            input(type='text' name='email' id='signup_email')
       .userForm__field
         label(for='username') username
         .userForm__field__input
             img(src='images/user.svg' alt='Username icon' class='userForm__field__icon')
-            input(type='text' name='username')
+            input(type='text' name='username'  id='signup_username')
       .userForm__field
         label(for='password') password
         .userForm__field__input
             img(src='images/padlock.svg' alt='Password icon' class='userForm__field__icon')
-            input(type='text' name='password')
+            input(type='password' name='password' id='signup_password')
       .userForm__field
         .userForm__field--submit
-          input(type='submit' value='Create my account' class='userForm__field__icon btn btn--primary')
+          input(type='submit' value='Create my account' class='userForm__field__icon btn btn--primary' id="signup")
   .login
     h2 Login
-    form.userForm(action='POST')
+    div.userForm
       .userForm__field
         label(for='email') e-mail
         .userForm__field__input
@@ -49,5 +49,6 @@ head
             input(type='text' name='password')
       .userForm__field
         .userForm__field--submit
-          input(type='submit' value='Login' class="btn btn--default")
+          input(type='submit' value='Login' class="btn btn--default" id="login")
   script(src='/javascripts/navigation.js')
+  script(src='/javascripts/signup.js')
