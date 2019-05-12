@@ -11,8 +11,12 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "mongoose": "^5.5.7",
     "morgan": "~1.9.0",
     "nodemon": "^1.19.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "pug": "2.0.0-beta11",
     "sass": "^1.19.0"
   },
