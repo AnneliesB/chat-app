@@ -5,5 +5,6 @@ const authController = require("../controllers/auth");
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
+router.post('/login', authController.login);
 router.post('/signup', authController.signup);
 module.exports = router;
