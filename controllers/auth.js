@@ -28,12 +28,22 @@ const signup = async (req, res, next) => {
 }
 const login = async (req, res, next) => {
     const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
-        res.json({
-            "status": "succes",
-            "data": {
-                "user": result
-            }
-        })
+        if(!result.user){
+            return res.json({
+                "status": "failed",
+                "message": "That username doesn't exist"
+            });
+        }else{
+            let token = jwt.sign({
+                uid: result.user._id,
+                username: result.user.username
+            }, "secretword");
+            return res.json({
+                "status": "succes",
+                "data": {
+                    "token": token
+                }
+        })}
     }).catch(error => {
         res.json({
             "status": "error",
