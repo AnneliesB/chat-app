@@ -20,7 +20,6 @@ document.querySelector("#login").addEventListener("click", (e) => {
             window.location.href = "/app";
         } else {
             alert = document.querySelector(".alert");
-            console.log("xoxo");
             alert.textContent = json.message;
             alert.classList.remove("hidden");
         }
