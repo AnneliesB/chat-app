@@ -1,5 +1,6 @@
 $tuna: #303944;
 $pictonBlue: #45A4F8;
+$pictonBlueLight: lighten($pictonBlue, 50%);
 $solitude: #EAECF0;
 $solitudeLight: #EAECF1;
 $steel: #666666;
@@ -10,7 +11,8 @@ $blackPearl: #1D232A;
 $secondaryNav: #282F37;
 $deepGray: #444;
 $anneliesGray: #D6DAE2;
-
+$alertRed: #E21C3D;
+$alertRedLight: #F9DEDE;
 
 
 $notEdgy: 1.3em;

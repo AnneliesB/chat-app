@@ -3,6 +3,44 @@
           box-sizing: border-box;
 }
 
+.alert {
+  position: absolute;
+  width: 80vw;
+  left: 10vw;
+  padding: .5em;
+  text-align: center;
+  top: 65px;
+  color: #303944;
+  /*
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    */
+  border-left: 5px solid #666666;
+  background-color: #999999;
+}
+
+.alert--failed {
+  border-left: 5px solid #E21C3D;
+  background-color: #F9DEDE;
+}
+
+.alert--succes {
+  border-left: 5px solid #45A4F8;
+  background-color: white;
+}
+
+/*
+@keyframes alert{
+    from{
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+*/
 .userForm__field__icon {
   width: 32px;
 }
@@ -645,5 +683,9 @@ body {
 
 h2 {
   font-weight: 400;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */

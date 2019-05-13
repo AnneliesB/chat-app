@@ -18,6 +18,11 @@ document.querySelector("#login").addEventListener("click", (e) => {
             let token = json.data.token;
             localStorage.setItem("token", token);
             window.location.href = "/app";
+        } else {
+            alert = document.querySelector(".alert");
+            console.log("xoxo");
+            alert.textContent = json.message;
+            alert.classList.remove("hidden");
         }
     });
 });
