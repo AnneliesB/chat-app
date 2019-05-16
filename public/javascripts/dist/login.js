@@ -1,27 +1,28 @@
-document.querySelector("#login").addEventListener("click", (e) => {
-    let username = document.querySelector("#login_username").value;
-    let password = document.querySelector("#login_password").value;
+"use strict";
 
-    fetch("http://localhost:3000/users/login", {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            "username": username,
-            "password": password,
-        })
-    }).then( response => {
-        return response.json();
-    }).then(json => {
-        if(json.status === "succes"){
-            let token = json.data.token;
-            localStorage.setItem("token", token);
-            window.location.href = "/app";
-        } else {
-            alert = document.querySelector(".alert");
-            alert.textContent = json.message;
-            alert.classList.remove("hidden");
-        }
-    });
+document.querySelector("#login").addEventListener("click", function (e) {
+  var username = document.querySelector("#login_username").value;
+  var password = document.querySelector("#login_password").value;
+  fetch("http://localhost:3000/users/login", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      "username": username,
+      "password": password
+    })
+  }).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    if (json.status === "succes") {
+      var token = json.data.token;
+      localStorage.setItem("token", token);
+      window.location.href = "/app";
+    } else {
+      alert = document.querySelector(".alert");
+      alert.textContent = json.message;
+      alert.classList.remove("hidden");
+    }
+  });
 });
