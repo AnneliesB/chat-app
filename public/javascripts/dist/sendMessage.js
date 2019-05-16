@@ -3,7 +3,7 @@
 var sendMessage = function sendMessage(e) {
   var message = input.value;
   console.log(message);
-  fetch('http://localhost:3000/api/v1/messages', {
+  fetch('https://secret-savannah-51030.herokuapp.com/api/v1/messages', {
     method: "post",
     "headers": {
       "Content-Type": 'application/json',

@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/api/v1/messages', {
+fetch('https://secret-savannah-51030.herokuapp.com/api/v1/messages', {
     'headers': {
         'Authorization': 'Bearer ' + localStorage.getItem('token')
     }

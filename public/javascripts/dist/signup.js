@@ -4,7 +4,7 @@ document.querySelector("#signup").addEventListener("click", function (e) {
   var email = document.querySelector("#signup_email").value;
   var username = document.querySelector("#signup_username").value;
   var password = document.querySelector("#signup_password").value;
-  fetch("http://localhost:3000/users/signup", {
+  fetch("https://secret-savannah-51030.herokuapp.com/api/v1/messages", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
