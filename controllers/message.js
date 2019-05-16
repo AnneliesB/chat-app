@@ -43,6 +43,7 @@ let post = (req, res) => {
     let message = new Message();
 
     message.user = req.user._id;
+    message.username = req.user.username;
     message.message = req.body.message;
     message.date = new Date();
 

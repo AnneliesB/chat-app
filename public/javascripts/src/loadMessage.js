@@ -13,10 +13,10 @@ fetch('http://localhost:3000/api/v1/messages', {
         console.log(json.data.messages.length);
         console.log(json.data.messages[0].user);
         json.data.messages.forEach(element => {
-            console.log(element);
+            console.log(element.username);
             let message = `<ul class="message__container message--sent">
                         <li class="message__avatar"></li>
-                        <li class="message__user">${element.user}</li>
+                        <li class="message__user">${element.username}</li>
                         <li>
                         <p>${element.message}</p>
                         </li>
