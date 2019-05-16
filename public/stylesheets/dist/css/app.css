@@ -3,6 +3,44 @@
           box-sizing: border-box;
 }
 
+.alert {
+  position: absolute;
+  width: 80vw;
+  left: 10vw;
+  padding: .5em;
+  text-align: center;
+  top: 75px;
+  color: #303944;
+  /*
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    */
+  border-left: 5px solid #666666;
+  background-color: #999999;
+}
+
+.alert--failed {
+  border-left: 5px solid #E21C3D;
+  background-color: #F9DEDE;
+}
+
+.alert--succes {
+  border-left: 5px solid #45A4F8;
+  background-color: white;
+}
+
+/*
+@keyframes alert{
+    from{
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+*/
 .userForm__field__icon {
   width: 32px;
 }
@@ -105,7 +143,7 @@
   margin-right: auto;
 }
 
-.container input[type=text] {
+.container input[type=text], .container input[type=password] {
   border: none;
   margin-left: 1em;
   background-color: #EAECF1;
@@ -146,7 +184,7 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
-form.messages__form {
+.messages__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +192,7 @@ form.messages__form {
   margin: auto;
 }
 
-form.messages__form input[type=text] {
+.messages__form input[type=text] {
   background-color: #D6DAE2;
   border: none;
   width: auto;
@@ -167,7 +205,7 @@ form.messages__form input[type=text] {
   margin: 0;
 }
 
-form.messages__form .btn--send {
+.messages__form .btn--send {
   background-color: #303944;
   width: auto;
   -webkit-box-flex: 1;
@@ -312,7 +350,7 @@ nav a.selected {
   height: 100vh;
 }
 
-form.search {
+.search {
   width: 100%;
   height: 10vh;
   min-height: 50px;
@@ -321,7 +359,7 @@ form.search {
   padding: 10px;
 }
 
-form.search input {
+.search input {
   border-radius: 1.3em;
   background-color: #303944;
   border: 0;
@@ -331,19 +369,19 @@ form.search input {
   color: #999999;
 }
 
-form.search input::-webkit-input-placeholder {
+.search input::-webkit-input-placeholder {
   color: #999999;
 }
 
-form.search input:-ms-input-placeholder {
+.search input:-ms-input-placeholder {
   color: #999999;
 }
 
-form.search input::-ms-input-placeholder {
+.search input::-ms-input-placeholder {
   color: #999999;
 }
 
-form.search input::placeholder {
+.search input::placeholder {
   color: #999999;
 }
 
@@ -645,5 +683,9 @@ body {
 
 h2 {
   font-weight: 400;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */
