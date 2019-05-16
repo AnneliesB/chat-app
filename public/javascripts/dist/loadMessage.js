@@ -9,11 +9,13 @@ fetch('http://localhost:3000/api/v1/messages', {
 }).then(function (result) {
   return result.json();
 }).then(function (json) {
+  /*
   console.log(json);
   console.log(json.data.messages.length);
   console.log(json.data.messages[0].user);
+  */
   json.data.messages.forEach(function (element) {
-    console.log(element.username);
+    //console.log(element.username);
     var message = "<ul class=\"message__container message--sent\">\n                        <li class=\"message__avatar\"></li>\n                        <li class=\"message__user\">".concat(element.username, "</li>\n                        <li>\n                        <p>").concat(element.message, "</p>\n                        </li>\n                        </ul>");
     document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', message);
   });
