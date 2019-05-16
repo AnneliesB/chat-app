@@ -120,12 +120,12 @@
 }
 
 // Mauro
-form.messages__form{
+.messages__form{
     display: flex;
     width: 90%;
     margin: auto;
 }
-form.messages__form input[type=text]{
+.messages__form input[type=text]{
     background-color: $anneliesGray;
     border: none;
     width: auto;
@@ -135,7 +135,7 @@ form.messages__form input[type=text]{
     max-height: 40px;
     margin: 0;
 }
-form.messages__form .btn--send{
+.messages__form .btn--send{
     background-color: $tuna;
     width: auto;
     flex-grow: 1;

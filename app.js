@@ -10,6 +10,7 @@ const passport = require("./passport/passport");
 var indexRouter = require('./routes/index');
 var loginRouter = require("./routes/login");
 var usersRouter = require('./routes/users');
+var messageRouter = require("./routes/messages");
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
@@ -30,8 +31,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/", loginRouter);
-app.use('/app', passport.authenticate('jwt', { session: false }), indexRouter);
+app.use('/app', indexRouter);
 app.use('/users', usersRouter);
+app.use("/api/v1/messages", passport.authenticate('jwt', { session: false }), messageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -26,7 +26,7 @@ nav a.selected{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     height: 100vh;
 }
-form.search{
+.search{
     width: 100%;
     height: 10vh;
     min-height: 50px;
@@ -34,7 +34,7 @@ form.search{
     border-bottom: 1px solid $tuna;
     padding: 10px;
 }
-form.search input{
+.search input{
     border-radius: $notEdgy;
     background-color: $tuna;
     border: 0;
@@ -43,7 +43,7 @@ form.search input{
     margin: 0 auto;
     color: $aluminium;
 }
-form.search input::placeholder{
+.search input::placeholder{
     color: $aluminium;
 }
 .users{
