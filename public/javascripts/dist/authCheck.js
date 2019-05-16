@@ -1,3 +1,4 @@
+
 "use strict";
 
 fetch('http://localhost:3000/api/v1/messages', {
@@ -10,4 +11,5 @@ fetch('http://localhost:3000/api/v1/messages', {
   console.log("Ingelogd");
 })["catch"](function (err) {
   window.location.href = "login";
+
 });

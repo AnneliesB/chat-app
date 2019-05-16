@@ -16,7 +16,12 @@ input.addEventListener("keyup", e =>{
             return result.json();
         })
         .then(json=>{
-            console.log(json);
+            //console.log(json);
+
+            /*let message = `<ul class="message__container message--sent">
+            <li class="message__avatar"></li>
+            <li class="message__user"></li>
+            </ul> `;*/
             /*
             let todo = `<div class="todo">
                 <input type="checkbox" class="todo__state">
@@ -28,7 +33,7 @@ input.addEventListener("keyup", e =>{
         })
         .catch(err =>{
             console.log(err);
-        })
+        });
 
     }
     e.preventDefault();
