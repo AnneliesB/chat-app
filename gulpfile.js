@@ -1,5 +1,6 @@
 const {src, dest, watch, parallel} = require('gulp');
 const html2pug = require('gulp-html2pug');
+const nodemon = require('gulp-nodemon');
 
 function htmlTopug(done){
     src("./public/html/*.html")
@@ -9,11 +10,11 @@ function htmlTopug(done){
     done();
 }
 
-function gulpNodemon(){
+function gulpNodemon(done){
     nodemon({
         script: './bin/www'
-        
     })
+    done();
 }
 
 watch("./public/html/**/*.html", htmlTopug);
