@@ -1,0 +1,8 @@
+{
+    "Database":{
+        "conn": "mongodb+srv://VetteChatApp:2QoH2zfSMWZWW27F@vettechatapp-iy94j.mongodb.net/test?retryWrites=true"
+    }, 
+    "jwt": {
+        "secret": "kmzlq333qzazHDJSsjdfkQjklq9897hskd"
+    }
+}

@@ -4,7 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var config = require("config");
 const passport = require("./passport/passport");
 
 var indexRouter = require('./routes/index');
@@ -14,7 +14,7 @@ var messageRouter = require("./routes/messages");
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/vettechatapp', {useNewUrlParser: true});
+mongoose.connect(config.get("Database.conn"), {useNewUrlParser: true});
 
 
 var app = express();
