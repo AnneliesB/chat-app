@@ -14,53 +14,44 @@ fetch('http://localhost:3000/api/v1/messages', {
   //console.log(json.data.messages[0].user);
   //let user = req.user._id;
   //console.log(req);
+  var previous = "lol";
   json.data.messages.forEach(function (element) {
-    console.log(element.username);
-
+    //console.log(element.username);
     if (json.currentUser == element.user) {
       // user is current user
       // message--sent class
-      var message = "<ul class=\"message__container message--sent\">\n                        <li class=\"message__avatar\"></li>\n                        <li class=\"message__user\">".concat(element.username, "</li>\n                        <li>\n                        <p>").concat(element.message, "</p>\n                        </li>\n                        </ul>");
-      document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', message);
+      // check if previous element exists
+      // check if previous element is the same as the current one
+      if (previous === element.user) {
+        // the previous message was sent by the same current user
+        var message = "<li>\n                        <p>".concat(element.message, "</p>\n                        </li>");
+        document.querySelector(".messages__flex").lastChild.insertAdjacentHTML('beforeend', message);
+      } else {
+        // the previous message was sent by a different user
+        var _message = "<ul class=\"message__container message--sent\">\n                        <li class=\"message__avatar\"></li>\n                        <li class=\"message__user\">".concat(element.username, "</li>\n                        <li>\n                        <p>").concat(element.message, "</p>\n                        </li>\n                        </ul>");
+
+        document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', _message);
+      }
     } else {
       // user is other user
       // message-received class
-      var _message = "<ul class=\"message__container message--received\">\n                        <li class=\"message__avatar\"></li>\n                        <li class=\"message__user\">".concat(element.username, "</li>\n                        <li>\n                        <p>").concat(element.message, "</p>\n                        </li>\n                        </ul>");
+      // check if previous message was sent by the same other user
+      if (previous === element.user) {
+        // the previous message was sent by the same current user
+        var _message2 = "<li>\n                    <p>".concat(element.message, "</p>\n                    </li>");
 
-      document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', _message);
+        document.querySelector(".messages__flex").lastChild.insertAdjacentHTML('beforeend', _message2);
+      } else {
+        // the previous message was sent by a different user
+        var _message3 = "<ul class=\"message__container message--received\">\n                    <li class=\"message__avatar\"></li>\n                    <li class=\"message__user\">".concat(element.username, "</li>\n                    <li>\n                    <p>").concat(element.message, "</p>\n                    </li>\n                    </ul>");
+
+        document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', _message3);
+      }
     }
+
+    previous = element.user;
+    console.log(previous + "nieuwe vorige");
   });
 })["catch"](function (err) {
   console.log(err);
 });
-/*const load = (req, res, next) => {
-    fetch('http://localhost:3000/api/v1/messages', {
-        method: "get",
-        "headers": {
-            "Content-Type": 'application/json',
-            "Authorization": "Bearer " + localStorage.getItem('token')
-        }
-    }).then(result => {
-        return result.json();
-    }).then(json => {
-        //console.log(json);
-        for (var i = 0; i < json.length; i++) {
-            let message = `<ul class="message__container message--sent">
-                        <li class="message__avatar"></li>
-                        <li class="message__user">${json.data.message.user}</li>
-                        <li>
-                        <p>${json.data.message.message}</p>
-                        </li>
-                        </ul>`;
-            document.querySelector(".loadedMessages").insertAdjacentHTML('beforeend', message);
-
-        }
-
-    }).catch(err =>{
-        console.log
-    })
-
-
-}
-
-load();*/
