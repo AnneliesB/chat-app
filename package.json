@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-html2pug": "^1.2.1"
+    "gulp-html2pug": "^1.2.1",
+    "gulp-nodemon": "^2.4.2"
   }
 }

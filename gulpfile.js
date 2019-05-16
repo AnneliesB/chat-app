@@ -9,6 +9,14 @@ function htmlTopug(done){
     done();
 }
 
+function gulpNodemon(){
+    nodemon({
+        script: './bin/www'
+        
+    })
+}
+
 watch("./public/html/**/*.html", htmlTopug);
 
 module.exports.default = htmlTopug;
+module.exports.nodemon = gulpNodemon;
