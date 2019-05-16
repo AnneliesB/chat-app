@@ -5,7 +5,6 @@ let register = document.querySelector(".register");
 
 
 loginBtn.addEventListener('click', function (e) {
-    console.log("login");
     login.style.display = "block";
     register.style.display = "none";
     loginBtn.style.backgroundColor = '#F2F4F8';
@@ -14,7 +13,6 @@ loginBtn.addEventListener('click', function (e) {
 });
 
 registerBtn.addEventListener('click', function (e) {
-    console.log("register");
     login.style.display = "none";
     register.style.display = "block";
     loginBtn.style.backgroundColor = '#EAECF1';

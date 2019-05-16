@@ -7,6 +7,7 @@ head
   link(rel='stylesheet' href='stylesheets/dist/css/app.css')
   link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700' rel='stylesheet')
   title Login/register
+.alert.alert--failed.hidden Oops, something went wrong!
 .buttons--mobile
   .button--mobile.button--mobile--register.inactive
     h2 Register
@@ -15,39 +16,41 @@ head
 .container
   .register
     h2 Register
-    form.userForm(action='POST')
+    div.userForm
       .userForm__field
-        label(for='email') e-mail
+        label(for='signup_email') e-mail
         .userForm__field__input
             img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
-            input(type='text' name='email')
+            input(type='text' name='email' id='signup_email')
       .userForm__field
-        label(for='username') username
+        label(for='signup_username') username
         .userForm__field__input
             img(src='images/user.svg' alt='Username icon' class='userForm__field__icon')
-            input(type='text' name='username')
+            input(type='text' name='username'  id='signup_username')
       .userForm__field
-        label(for='password') password
+        label(for='signup_password') password
         .userForm__field__input
             img(src='images/padlock.svg' alt='Password icon' class='userForm__field__icon')
-            input(type='text' name='password')
+            input(type='password' name='password' id='signup_password')
       .userForm__field
         .userForm__field--submit
-          input(type='submit' value='Create my account' class='userForm__field__icon btn btn--primary')
+          input(type='submit' value='Create my account' class='userForm__field__icon btn btn--primary' id="signup")
   .login
     h2 Login
-    form.userForm(action='POST')
+    div.userForm
       .userForm__field
-        label(for='email') e-mail
+        label(for='login_username') username
         .userForm__field__input
-            img(src='images/email.svg' alt='Email icon' class='userForm__field__icon')
-            input(type='text' name='email')
+            img(src='images/user.svg' alt='User icon' class='userForm__field__icon')
+            input(type='text' name='username' id="login_username")
       .userForm__field
-        label(for='password') password
+        label(for='login_password') password
         .userForm__field__input
             img(src='images/padlock.svg' alt='Password icon' class="userForm__field__icon")
-            input(type='text' name='password')
+            input(type='text' name='password' id='login_password')
       .userForm__field
         .userForm__field--submit
-          input(type='submit' value='Login' class="btn btn--default")
+          input(type='submit' value='Login' class="btn btn--default" id="login")
   script(src='/javascripts/navigation.js')
+  script(src='/javascripts/signup.js')
+  script(src='/javascripts/login.js')

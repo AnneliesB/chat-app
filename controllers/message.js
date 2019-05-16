@@ -1,5 +1,19 @@
+
+const Message = require("../models/Message");
+
 // GET: /api/v1/messages OR /api/v1/messages?user=username
 let get = (req, res) => {
+    Message.find({}, (err, docs) => {
+        if(!err) {
+            res.json({
+                "status": "success",
+                "data": {
+                    "messages": docs
+                }
+            });
+        }
+    });
+    /*
     if (req.query.user) {
         let username = req.query.user;
         res.json({
@@ -12,6 +26,7 @@ let get = (req, res) => {
             "message": "GETTING messages"
         });
     }
+    */
 };
 
 // GET: /api/v1/messages/:id
@@ -25,9 +40,27 @@ let getid = (req, res) => {
 
 // POST: /api/v1/messages
 let post = (req, res) => {
-    res.json({
-        "status": "success",
-        "message": "POSTING a new message for user Pikachu"
+    let message = new Message();
+
+    message.user = req.user._id;
+    message.message = req.body.message;
+    message.date = new Date();
+
+    message.save((err, doc) => {
+        if(err){
+            res.json({
+                "status": "error",
+                "message": err
+            });
+        } 
+        if(!err) {
+            res.json({
+                "status": "success",
+                "data": {
+                    "message": doc
+                }
+            });
+        }
     });
 };
 

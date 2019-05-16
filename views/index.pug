@@ -1,39 +1,112 @@
 doctype html
-html
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width,initial-scale=1')
-    meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    link(rel='stylesheet', href='stylesheets/dist/css/normalize.css')
-    link(rel='stylesheet', href='stylesheets/dist/css/app.css')
-    link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700', rel='stylesheet')
-    title VetteChatApp
-  body
-    .layout__container
-      nav
-      .nav__secondary
-        .seach
-          input(type='search', placeholder='Zoek iemand')
-        ul
-          li.user.user--online
-            .user__avatar
-            h3.user__name Poes
-            h5.user__motto Geef vis
-      main.messages
-        ul.message__container.message--received
-          li.message__avatar
-          li.message_user Beatrice
-          li Ik ben echt koekesaai eigenlijk
-          li haha
-        ul.message__container.message--sent
-          li.message__avatar
-          li.message_user You
-          li Ja swaar
-          li ge weet het dan toch
-          li hihi
-        input#message(type='text')
-        input(type='submit')
-      .profile__container
-        .profile__avatar
-        .profile__name Annepries 🅱️
-        .profile__motto I've got the power
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet' href='stylesheets/dist/css/normalize.css')
+  link(rel='stylesheet' href='stylesheets/dist/css/app.css')
+  link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700' rel='stylesheet')
+  title VetteChatApp
+.layout__container
+  nav
+    a(href="#" class="selected" id="users") 
+      img(src="images/multiple-users-silhouette.svg" alt="users" height="30px" width="30px")
+    a(href="#") @
+    a(href="#") 
+      img(src="images/logout.svg" alt="logout" height="30px" width="30px")
+  .nav__secondary
+    .search
+      input(type='search' placeholder='Zoek iemand')
+    ul.users
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--online
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+      li.user.user--offline
+        .user__avatar
+        h3.user__name Poes
+        h5.user__motto Geef vis
+  main.messages
+    .messages__flex
+      ul.message__container.message--received
+        li.message__avatar
+        li.message__user Beatrice
+        li 
+          p Ik ben echt koekesaai eigenlijk
+        li 
+          p haha
+      ul.message__container.message--sent
+        li.message__avatar
+        li.message__user You
+        li 
+          p Ja swaar
+        li 
+          p ge weet het dan toch
+        li 
+          p hihi
+      ul.message__container.message--received
+        li.message__avatar
+        li.message__user Beatrice
+        li 
+          p Ik ben echt koekesaai eigenlijk
+        li 
+          p haha
+      ul.message__container.message--received
+        li.message__avatar(style="background: url(images/spongebob.jpg)")
+        li.message__user Poes
+        li 
+          p Kunnen  jullie stoppen met al jullie gezever en mij eindelijk vis geven? Jullie mening kan oprecht niemand schelen!!! GEEF VIS!
+        li 
+          p haha
+      ul.message__container.message--sent
+        li.message__avatar
+        li.message__user You
+        li 
+          p Oké sorry
+        li 
+          p *geeft vis*
+        li 
+          p hihi
+    .messages__form
+      input#message(type='text')
+      input.btn.btn--send(type='submit' value='Verstuur')
+  .profile__container
+    .profile__avatar
+    p.profile__name Annepries &#x1F171;
+    p.profile__motto I&apos;ve got the power
+  script(src='/javascripts/nav.js')
+  script(src='/javascripts/authCheck.js')
+  script(src='/javascripts/sendMessage.js')

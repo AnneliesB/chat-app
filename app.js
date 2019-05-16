@@ -5,8 +5,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const passport = require("./passport/passport");
+
 var indexRouter = require('./routes/index');
+var loginRouter = require("./routes/login");
 var usersRouter = require('./routes/users');
+var messageRouter = require("./routes/messages");
+
+const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true);
+mongoose.connect('mongodb://localhost:27017/vettechatapp', {useNewUrlParser: true});
+
 
 var app = express();
 app.use(cors());
@@ -21,8 +30,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use("/", loginRouter);
+app.use('/app', indexRouter);
 app.use('/users', usersRouter);
+app.use("/api/v1/messages", passport.authenticate('jwt', { session: false }), messageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
