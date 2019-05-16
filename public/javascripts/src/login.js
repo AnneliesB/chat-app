@@ -2,7 +2,7 @@ document.querySelector("#login").addEventListener("click", (e) => {
     let username = document.querySelector("#login_username").value;
     let password = document.querySelector("#login_password").value;
 
-    fetch("https://secret-savannah-51030.herokuapp.com/api/v1/messages", {
+    fetch("https://secret-savannah-51030.herokuapp.com/users/login", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
