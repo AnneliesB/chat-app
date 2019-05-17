@@ -1,6 +1,7 @@
 "use strict";
 
-fetch('https://secret-savannah-51030.herokuapp.com/api/v1/messages', {
+var apiURL = "http://localhost:3000/api/v1/messages";
+fetch(apiURL, {
   'headers': {
     'Authorization': 'Bearer ' + localStorage.getItem('token')
   }

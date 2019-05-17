@@ -1,9 +1,29 @@
 "use strict";
 
+var apiURL = "http://localhost:3000/api/v1/messages";
+var url = "http://localhost:3000/";
+var primus = Primus.connect(url, {
+  reconnect: {
+    max: Infinity // Number: The max delay before we try to reconnect.
+    ,
+    min: 500 // Number: The minimum delay before we try reconnect.
+    ,
+    retries: 10 // Number: How many times we should try to reconnect.
+
+  }
+});
+primus.on("data", function (data) {
+  if (data.action == "addMessage") {
+    console.log(data.data);
+    console.log(data.data.data.message);
+    addMessage(data.data.data.message, data.data);
+  }
+});
+
 var sendMessage = function sendMessage(e) {
   var message = input.value;
   console.log(message);
-  fetch('https://secret-savannah-51030.herokuapp.com/api/v1/messages', {
+  fetch(apiURL, {
     method: "post",
     "headers": {
       "Content-Type": 'application/json',
@@ -15,7 +35,10 @@ var sendMessage = function sendMessage(e) {
   }).then(function (result) {
     return result.json();
   }).then(function (json) {
-    //console.log(json);
+    primus.write({
+      "action": "addMessage",
+      "data": json
+    }); //console.log(json);
 
     /*let message = `<ul class="message__container message--sent">
     <li class="message__avatar"></li>
@@ -30,6 +53,7 @@ var sendMessage = function sendMessage(e) {
     </div>`; 
     document.querySelector(".todo__new").insertAdjacentHTML('afterend', todo);
     */
+
     input.value = "";
   })["catch"](function (err) {
     console.log(err);

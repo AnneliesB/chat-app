@@ -1,9 +1,11 @@
+var loginURL = "http://localhost:3000/users/"
+
 document.querySelector("#signup").addEventListener("click", (e) => {
     let email = document.querySelector("#signup_email").value;
     let username = document.querySelector("#signup_username").value;
     let password = document.querySelector("#signup_password").value;
 
-    fetch("https://secret-savannah-51030.herokuapp.com/users/signup", {
+    fetch(loginURL + "signup", {
         method: "post",
         headers: {
             "Content-Type": "application/json"

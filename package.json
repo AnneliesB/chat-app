@@ -20,8 +20,10 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
+    "primus": "^7.3.2",
     "pug": "2.0.0-beta11",
-    "sass": "^1.19.0"
+    "sass": "^1.19.0",
+    "ws": "^7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

@@ -60,7 +60,8 @@ let post = (req, res) => {
                 "status": "success",
                 "data": {
                     "message": doc
-                }
+                },
+                "currentUser": req.user._id
             });
         }
     });
