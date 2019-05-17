@@ -3,9 +3,7 @@
 var previous = "lol";
 
 var addMessage = function addMessage(element, json) {
-  console.log(element);
-
-  if (json.currentUser == element.user) {
+  if (currentUser == element.user) {
     // user is current user
     // message--sent class
     // check if previous element exists
@@ -38,10 +36,11 @@ var addMessage = function addMessage(element, json) {
   }
 
   previous = element.user;
-  console.log(previous + "nieuwe vorige");
   var objDiv = document.querySelector(".messages__flex");
   objDiv.scrollTop = objDiv.scrollHeight;
 };
+
+var currentUser = " ";
 
 var startUp = function startUp() {
   fetch(apiURL, {
@@ -53,11 +52,12 @@ var startUp = function startUp() {
   }).then(function (result) {
     return result.json();
   }).then(function (json) {
-    //console.log(json);
+    currentUser = json.currentUser; //console.log(json);
     //console.log(json.data.messages.length);
     //console.log(json.data.messages[0].user);
     //let user = req.user._id;
     //console.log(req);
+
     json.data.messages.forEach(function (element) {
       addMessage(element, json);
     });

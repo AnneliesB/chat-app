@@ -1,8 +1,6 @@
 let previous = "lol";
 const addMessage = (element, json) => {
-console.log(element);
-
-if (json.currentUser == element.user) {
+if (currentUser == element.user) {
     // user is current user
     // message--sent class
     // check if previous element exists
@@ -48,11 +46,10 @@ if (json.currentUser == element.user) {
     }
 }
 previous = element.user;
-    console.log(previous + "nieuwe vorige");
     var objDiv = document.querySelector(".messages__flex");
     objDiv.scrollTop = objDiv.scrollHeight;
 }
-
+var currentUser = " ";
 
 const startUp = () => {
     fetch(apiURL, {
@@ -66,6 +63,7 @@ const startUp = () => {
         return result.json();
     })
     .then(json => {
+        currentUser = json.currentUser;
         //console.log(json);
         //console.log(json.data.messages.length);
         //console.log(json.data.messages[0].user);
