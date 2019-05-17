@@ -1,7 +1,7 @@
-var apiURL = "http://localhost:3000/api/v1/messages"
+// var apiURL = "http://localhost:3000/api/v1/messages"
 
 
-fetch(apiURL, {
+fetch(url + "api/v1/messages", {
     'headers': {
         'Authorization': 'Bearer ' + localStorage.getItem('token')
     }

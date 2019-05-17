@@ -52,7 +52,7 @@ previous = element.user;
 var currentUser = " ";
 
 const startUp = () => {
-    fetch(apiURL, {
+    fetch(url + "api/v1/messages", {
         method: "get",
         "headers": {
             "Content-Type": 'application/json',

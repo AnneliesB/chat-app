@@ -43,7 +43,7 @@ var addMessage = function addMessage(element, json) {
 var currentUser = " ";
 
 var startUp = function startUp() {
-  fetch(apiURL, {
+  fetch(url + "api/v1/messages", {
     method: "get",
     "headers": {
       "Content-Type": 'application/json',

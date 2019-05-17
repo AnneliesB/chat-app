@@ -1,7 +1,7 @@
 "use strict";
 
-var apiURL = "http://localhost:3000/api/v1/messages";
-fetch(apiURL, {
+// var apiURL = "http://localhost:3000/api/v1/messages"
+fetch(url + "api/v1/messages", {
   'headers': {
     'Authorization': 'Bearer ' + localStorage.getItem('token')
   }

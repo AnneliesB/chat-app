@@ -1,11 +1,10 @@
 "use strict";
 
-var loginURL = "http://localhost:3000/users/";
 document.querySelector("#signup").addEventListener("click", function (e) {
   var email = document.querySelector("#signup_email").value;
   var username = document.querySelector("#signup_username").value;
   var password = document.querySelector("#signup_password").value;
-  fetch(loginURL + "signup", {
+  fetch(url + "signup", {
     method: "post",
     headers: {
       "Content-Type": "application/json"

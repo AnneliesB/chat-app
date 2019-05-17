@@ -1,11 +1,10 @@
-var loginURL = "http://localhost:3000/users/"
 
 document.querySelector("#signup").addEventListener("click", (e) => {
     let email = document.querySelector("#signup_email").value;
     let username = document.querySelector("#signup_username").value;
     let password = document.querySelector("#signup_password").value;
 
-    fetch(loginURL + "signup", {
+    fetch(url + "signup", {
         method: "post",
         headers: {
             "Content-Type": "application/json"

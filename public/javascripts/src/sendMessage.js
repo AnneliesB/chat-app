@@ -1,6 +1,3 @@
-
-var apiURL = "http://localhost:3000/api/v1/messages"
-var url = "http://localhost:3000/";
 var primus = Primus.connect(url, {
     reconnect: {
         max: Infinity // Number: The max delay before we try to reconnect.
@@ -21,7 +18,7 @@ primus.on("data", (data) =>{
 const sendMessage = (e) =>  {
     let message = input.value;
     console.log(message);
-    fetch(apiURL, {
+    fetch(url + "api/v1/messages", {
         method: "post",
         "headers": {
             "Content-Type": 'application/json',
