@@ -14,7 +14,7 @@ html
         a.selected#users(href='#')
           img(src='images/multiple-users-silhouette.svg', alt='users', height='30px', width='30px')
         a(href='#') @
-        a(href='#')
+        a(href='#' id="logout")
           img(src='images/logout.svg', alt='logout', height='30px', width='30px')
       .nav__secondary
         .search
@@ -76,4 +76,4 @@ html
     script(src='/javascripts/dist/authCheck.js')
     script(src='/javascripts/dist/sendMessage.js')
     script(src='/javascripts/dist/loadMessage.js')
-      
+    script(src='/javascripts/dist/logout.js')
