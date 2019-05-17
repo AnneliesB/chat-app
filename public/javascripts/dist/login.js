@@ -3,7 +3,7 @@
 document.querySelector("#login").addEventListener("click", function (e) {
   var username = document.querySelector("#login_username").value;
   var password = document.querySelector("#login_password").value;
-  fetch(url + "login", {
+  fetch(url + "users/login", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
