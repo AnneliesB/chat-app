@@ -50,9 +50,16 @@ var editMotto = function editMotto(data) {
   var textArea = "<input type=\"text\" class=\"profile__input\" value=\"".concat(currentMotto, "\">");
   profileMenu.insertAdjacentHTML("beforeend", textArea);
   var profileInput = document.querySelector(".profile__input");
+  profileInput.focus();
   profileInput.addEventListener("keyup", function (e) {
     if (e.keyCode == 13) {
       saveMotto(profileInput.value);
+    }
+
+    if (e.keyCode == 27) {
+      profileInput.parentNode.removeChild(profileInput);
+      var mottoParagraph = "<p class=\"profile__motto\" onclick=\"editMotto(this);\">".concat(currentMotto, "</p>");
+      profileMenu.insertAdjacentHTML("beforeend", mottoParagraph);
     }
   });
 };

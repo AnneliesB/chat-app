@@ -61,9 +61,15 @@ const editMotto = (data) => {
     let textArea = `<input type="text" class="profile__input" value="${currentMotto}">`;
     profileMenu.insertAdjacentHTML("beforeend", textArea);
     let profileInput = document.querySelector(".profile__input");
+    profileInput.focus();
     profileInput.addEventListener("keyup", (e) => {
         if(e.keyCode == 13){
             saveMotto(profileInput.value);
+        }
+        if(e.keyCode == 27){
+            profileInput.parentNode.removeChild(profileInput);
+            let mottoParagraph = `<p class="profile__motto" onclick="editMotto(this);">${currentMotto}</p>`;
+            profileMenu.insertAdjacentHTML("beforeend", mottoParagraph);
         }
     });
 
