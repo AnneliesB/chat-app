@@ -10,7 +10,11 @@ const User = new Schema({
    motto: {
        type: String,
        required: false
-   }
+   },
+   avatar: {
+    type: String,
+    required: false
+}
 });
 User.plugin(passportLocalMongoose, {selectFields: "email"});
 

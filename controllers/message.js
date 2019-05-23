@@ -46,6 +46,7 @@ let post = (req, res) => {
     message.user = req.user._id;
     message.username = req.user.username;
     message.message = req.body.message;
+    message.avatar = req.user.avatar;
     message.date = new Date();
 
     message.save((err, doc) => {

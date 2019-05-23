@@ -6,9 +6,10 @@ const signup = async (req, res, next) => {
     let username = req.body.username;
     let password = req.body.password;
     let email = req.body.email;
+    let avatar = req.body.avatar;
     let motto = "Hey, ik gebruik nou VetteChatApp 🚀";
 
-    const user = new User({username: username, email: email, motto: motto });
+    const user = new User({username: username, email: email, motto: motto, avatar: avatar});
     await user.setPassword(password);
     await user.save().then(result => {
 

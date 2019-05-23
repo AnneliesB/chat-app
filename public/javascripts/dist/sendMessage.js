@@ -12,8 +12,6 @@ var primus = Primus.connect(url, {
 });
 primus.on("data", function (data) {
   if (data.action == "addMessage") {
-    console.log(data.data);
-    console.log(data.data.data.message);
     addMessage(data.data.data.message, data.data);
   } else if (data.action == "reload") {
     document.querySelector(".messages__flex").innerHTML = "";
@@ -27,7 +25,6 @@ primus.on("data", function (data) {
 
 var sendMessage = function sendMessage(e) {
   var message = input.value;
-  console.log(message);
   fetch(url + "api/v1/messages", {
     method: "post",
     "headers": {

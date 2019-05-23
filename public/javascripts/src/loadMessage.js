@@ -1,5 +1,6 @@
 let previous = "lol";
 const addMessage = (element, json) => {
+console.log(element);
 if (currentUser == element.user) {
     // user is current user
     // message--sent class
@@ -38,7 +39,7 @@ if (currentUser == element.user) {
     } else {
         // the previous message was sent by a different user
         let message = `<ul class="message__container message--received">
-        <li class="message__avatar"></li>
+        <li class="message__avatar"  style="background: url(${element.avatar}) center center;"></li>
         <li class="message__user">${element.username}</li>
         <li>
         <p>${element.message}</p>

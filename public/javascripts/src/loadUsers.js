@@ -1,7 +1,7 @@
 const appendUser = (user) => {
     let userHtml = 
     `<li class="user user--online">
-        <div class="user__avatar"></div>
+        <div class="user__avatar" style="background: url(${user.avatar}) center center;"></div>
         <h3 class="user__name">${user.username}</h3>
         <h5 class="user__motto">${user.motto}</h5>
     </li>`;
@@ -42,7 +42,7 @@ const loadProfile = () => {
     })
     .then(json => {
         let profileHTML = 
-        `<div class="profile__avatar"></div>
+        `<div class="profile__avatar" style="background: url(${json.user.avatar}) center center;"></div>
         <p class="profile__name">${json.user.username}</p>
         <p class="profile__motto" onclick="editMotto(this);">${json.user.motto}</p>`
         const profileMenu = document.querySelector(".profile__container");
@@ -67,7 +67,6 @@ const editMotto = (data) => {
         }
     });
 
-    console.log(currentMotto);
 }
 const saveMotto = (motto)=>{
     fetch(url + "users/profile", {

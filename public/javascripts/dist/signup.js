@@ -4,6 +4,8 @@ document.querySelector("#signup").addEventListener("click", function (e) {
   var email = document.querySelector("#signup_email").value;
   var username = document.querySelector("#signup_username").value;
   var password = document.querySelector("#signup_password").value;
+  var pokeId = Math.floor(Math.random() * 154);
+  var avatar = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/".concat(pokeId, ".png");
   fetch(url + "users/signup", {
     method: "post",
     headers: {
@@ -12,7 +14,8 @@ document.querySelector("#signup").addEventListener("click", function (e) {
     body: JSON.stringify({
       "username": username,
       "password": password,
-      "email": email
+      "email": email,
+      "avatar": avatar
     })
   }).then(function (response) {
     return response.json();

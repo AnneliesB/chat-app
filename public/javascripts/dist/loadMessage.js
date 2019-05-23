@@ -3,6 +3,8 @@
 var previous = "lol";
 
 var addMessage = function addMessage(element, json) {
+  console.log(element);
+
   if (currentUser == element.user) {
     // user is current user
     // message--sent class
@@ -29,7 +31,7 @@ var addMessage = function addMessage(element, json) {
       document.querySelector(".messages__flex").lastChild.insertAdjacentHTML('beforeend', _message2);
     } else {
       // the previous message was sent by a different user
-      var _message3 = "<ul class=\"message__container message--received\">\n        <li class=\"message__avatar\"></li>\n        <li class=\"message__user\">".concat(element.username, "</li>\n        <li>\n        <p>").concat(element.message, "</p>\n        </li>\n        </ul>");
+      var _message3 = "<ul class=\"message__container message--received\">\n        <li class=\"message__avatar\"  style=\"background: url(".concat(element.avatar, ") center center;\"></li>\n        <li class=\"message__user\">").concat(element.username, "</li>\n        <li>\n        <p>").concat(element.message, "</p>\n        </li>\n        </ul>");
 
       document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', _message3);
     }
