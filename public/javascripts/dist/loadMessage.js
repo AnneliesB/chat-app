@@ -10,11 +10,11 @@ var addMessage = function addMessage(element, json) {
     // check if previous element is the same as the current one
     if (previous === element.user) {
       // the previous message was sent by the same current user
-      var message = "<li>\n            <p>".concat(element.message, "</p>\n            </li>");
+      var message = "<li>\n            <p>".concat(element.message, "</p>\n            <a href=\"#\" class=\"delete\" data-message-id=\"").concat(element._id, "\" onclick=\"deleteMessage(this);\"><img src=\"images/dist/delete.svg\" width=\"17px\"/> </a>\n            </li>");
       document.querySelector(".messages__flex").lastChild.insertAdjacentHTML('beforeend', message);
     } else {
       // the previous message was sent by a different user
-      var _message = "<ul class=\"message__container message--sent\">\n            <li class=\"message__avatar\"></li>\n            <li class=\"message__user\">".concat(element.username, "</li>\n            <li>\n            <p>").concat(element.message, "</p>\n            </li>\n            </ul>");
+      var _message = "<ul class=\"message__container message--sent\">\n            <li class=\"message__avatar\"></li>\n            <li class=\"message__user\">".concat(element.username, "</li>\n            <li>\n            <p>").concat(element.message, "</p>\n            <a href=\"#\" class=\"delete\" data-message-id=\"").concat(element._id, "\" onclick=\"deleteMessage(this);\"><img src=\"images/dist/delete.svg\" width=\"17px\"/> </a>\n            </li>\n            </ul>");
 
       document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', _message);
     }

@@ -9,6 +9,7 @@ if (currentUser == element.user) {
             // the previous message was sent by the same current user
             let message = `<li>
             <p>${element.message}</p>
+            <a href="#" class="delete" data-message-id="${element._id}" onclick="deleteMessage(this);"><img src="images/dist/delete.svg" width="17px"/> </a>
             </li>`;
             document.querySelector(".messages__flex").lastChild.insertAdjacentHTML('beforeend', message);
         } else {
@@ -18,6 +19,7 @@ if (currentUser == element.user) {
             <li class="message__user">${element.username}</li>
             <li>
             <p>${element.message}</p>
+            <a href="#" class="delete" data-message-id="${element._id}" onclick="deleteMessage(this);"><img src="images/dist/delete.svg" width="17px"/> </a>
             </li>
             </ul>`;
             document.querySelector(".messages__flex").insertAdjacentHTML('beforeend', message);

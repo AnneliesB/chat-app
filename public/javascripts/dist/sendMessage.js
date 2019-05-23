@@ -16,6 +16,12 @@ primus.on("data", function (data) {
     console.log(data.data.data.message);
     addMessage(data.data.data.message, data.data);
   }
+
+  if (data.action == "reload") {
+    document.querySelector(".messages__flex").innerHTML = "";
+    previous = "lol";
+    startUp();
+  }
 });
 
 var sendMessage = function sendMessage(e) {
