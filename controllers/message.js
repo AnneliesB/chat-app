@@ -79,12 +79,16 @@ let putid = (req, res) => {
 // DELETE: /api/v1/messages/:id
 let del = (req, res)=> {
     let id = req.params.id;
-    res.json({
-        "status": "success",
-        "message": "DELETING a message with ID: " + id
+    Message.remove({_id: id}, (err) => {
+        if (err) return res.status(500).send(err);
+        if(!err){
+            res.json({
+                "status": "success",
+                "message": "DELETING a message with ID: " + id
+            });
+        }
     });
-};
-
+}
 
 
 module.exports.get = get;

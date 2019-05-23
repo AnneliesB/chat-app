@@ -1,8 +1,8 @@
 {
     "Database":{
-        "conn": "mongodb://localhost:27017/vettechatapp"
+        "conn": "mongodb+srv://VetteChatApp:2QoH2zfSMWZWW27F@vettechatapp-iy94j.mongodb.net/test?retryWrites=true"
     }, 
     "jwt": {
-        "secret": "secretword"
+        "secret": "kmzlq333qzazHDJSsjdfkQjklq9897hskd"
     }
 }
