@@ -22,6 +22,11 @@ primus.on("data", function (data) {
     previous = "lol";
     startUp();
   }
+
+  if (data.action == "updateMotto") {
+    document.querySelector("ul.users").innerHTML = "";
+    getUsers();
+  }
 });
 
 var sendMessage = function sendMessage(e) {

@@ -16,6 +16,10 @@ primus.on("data", (data) =>{
         previous = "lol";
         startUp();
     }
+    if(data.action == "updateMotto"){
+        document.querySelector("ul.users").innerHTML = "";
+        getUsers();
+    }
 });
 
 

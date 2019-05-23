@@ -6,6 +6,10 @@ const User = new Schema({
    email: {
        type: String,
        required: true
+   },
+   motto: {
+       type: String,
+       required: false
    }
 });
 User.plugin(passportLocalMongoose, {selectFields: "email"});

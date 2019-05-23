@@ -1,11 +1,9 @@
-
-
 const appendUser = (user) => {
     let userHtml = 
     `<li class="user user--online">
         <div class="user__avatar"></div>
         <h3 class="user__name">${user.username}</h3>
-        <h5 class="user__motto">Geef vis</h5>
+        <h5 class="user__motto">${user.motto}</h5>
     </li>`;
     
     const userMenu = document.querySelector("ul.users");
@@ -46,9 +44,55 @@ const loadProfile = () => {
         let profileHTML = 
         `<div class="profile__avatar"></div>
         <p class="profile__name">${json.user.username}</p>
-        <p class="profile__motto">I've got the power</p>`
+        <p class="profile__motto" onclick="editMotto(this);">${json.user.motto}</p>`
         const profileMenu = document.querySelector(".profile__container");
         profileMenu.insertAdjacentHTML("beforeend", profileHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+const editMotto = (data) => {
+    const mottoElement = document.querySelector(".profile__motto");
+    const profileMenu = mottoElement.parentNode;
+    let currentMotto = mottoElement.innerHTML;
+    mottoElement.parentNode.removeChild(mottoElement);
+    let textArea = `<input type="text" class="profile__input" value="${currentMotto}">`;
+    profileMenu.insertAdjacentHTML("beforeend", textArea);
+    let profileInput = document.querySelector(".profile__input");
+    profileInput.addEventListener("keyup", (e) => {
+        if(e.keyCode == 13){
+            saveMotto(profileInput.value);
+        }
+    });
+
+    console.log(currentMotto);
+}
+const saveMotto = (motto)=>{
+    fetch(url + "users/profile", {
+        method: "put",
+        "headers": {
+            "Content-Type": 'application/json',
+            "Authorization": "Bearer " + localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            "motto": motto
+        })
+    })
+    .then(result => {
+        return result.json();
+    })
+    .then(json => {
+        const mottoElement = document.querySelector(".profile__input");
+        const profileMenu = mottoElement.parentNode;
+        let currentMotto = json.motto;
+        mottoElement.parentNode.removeChild(mottoElement);
+        let mottoParagraph = `<p class="profile__motto">${currentMotto}</p>`;
+        profileMenu.insertAdjacentHTML("beforeend", mottoParagraph);
+        primus.write({
+            "action": "updateMotto",
+        });
     })
     .catch(err => {
         console.log(err);

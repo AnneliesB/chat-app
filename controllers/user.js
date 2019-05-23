@@ -19,5 +19,16 @@ const getProfile = (req, res) =>{
     });
 }
 
+const updateProfile = (req, res) => {
+    User.findByIdAndUpdate(req.user._id, req.body, {new: true}, (err, doc) => {
+        if(!err){
+            res.json({
+                "status": "succes",
+                "motto": req.body.motto
+            })
+        }
+    });
+}
 module.exports.getAll = getAll;
 module.exports.getProfile = getProfile;
+module.exports.updateProfile = updateProfile;
