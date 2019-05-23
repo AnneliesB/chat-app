@@ -88,7 +88,7 @@ const saveMotto = (motto)=>{
         const profileMenu = mottoElement.parentNode;
         let currentMotto = json.motto;
         mottoElement.parentNode.removeChild(mottoElement);
-        let mottoParagraph = `<p class="profile__motto">${currentMotto}</p>`;
+        let mottoParagraph = `<p class="profile__motto" onclick="editMotto(this);">${currentMotto}</p>`;
         profileMenu.insertAdjacentHTML("beforeend", mottoParagraph);
         primus.write({
             "action": "updateMotto"
