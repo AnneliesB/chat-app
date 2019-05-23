@@ -15,15 +15,11 @@ primus.on("data", function (data) {
     console.log(data.data);
     console.log(data.data.data.message);
     addMessage(data.data.data.message, data.data);
-  }
-
-  if (data.action == "reload") {
+  } else if (data.action == "reload") {
     document.querySelector(".messages__flex").innerHTML = "";
     previous = "lol";
     startUp();
-  }
-
-  if (data.action == "updateMotto") {
+  } else if (data.action == "updateMotto") {
     document.querySelector("ul.users").innerHTML = "";
     getUsers();
   }

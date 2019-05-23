@@ -91,7 +91,7 @@ const saveMotto = (motto)=>{
         let mottoParagraph = `<p class="profile__motto">${currentMotto}</p>`;
         profileMenu.insertAdjacentHTML("beforeend", mottoParagraph);
         primus.write({
-            "action": "updateMotto",
+            "action": "updateMotto"
         });
     })
     .catch(err => {
