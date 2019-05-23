@@ -12,5 +12,12 @@ const getAll = (req, res) => {
         }
     });
 }
+const getProfile = (req, res) =>{
+    res.json({
+        "status": "success",
+        "user": req.user
+    });
+}
 
 module.exports.getAll = getAll;
+module.exports.getProfile = getProfile;

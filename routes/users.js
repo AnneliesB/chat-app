@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require("../passport/passport");
 const router = express.Router();
 const authController = require("../controllers/auth");
 const userController = require("../controllers/user");
@@ -6,4 +7,5 @@ const userController = require("../controllers/user");
 router.get('/', userController.getAll);
 router.post('/login', authController.login);
 router.post('/signup', authController.signup);
+router.get('/profile', passport.authenticate('jwt', { session: false }), userController.getProfile);
 module.exports = router;

@@ -24,4 +24,23 @@ var getUsers = function getUsers() {
   });
 };
 
+var loadProfile = function loadProfile() {
+  fetch(url + "users/profile", {
+    method: "get",
+    "headers": {
+      "Content-Type": 'application/json',
+      "Authorization": "Bearer " + localStorage.getItem('token')
+    }
+  }).then(function (result) {
+    return result.json();
+  }).then(function (json) {
+    var profileHTML = "<div class=\"profile__avatar\"></div>\n        <p class=\"profile__name\">".concat(json.user.username, "</p>\n        <p class=\"profile__motto\">I've got the power</p>");
+    var profileMenu = document.querySelector(".profile__container");
+    profileMenu.insertAdjacentHTML("beforeend", profileHTML);
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+
 getUsers();
+loadProfile();
