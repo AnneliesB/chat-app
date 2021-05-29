@@ -23,7 +23,7 @@
     "primus": "^7.3.2",
     "pug": "2.0.0-beta11",
     "sass": "^1.19.0",
-    "ws": "^7.0.0"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
